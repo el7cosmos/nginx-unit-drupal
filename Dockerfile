@@ -37,12 +37,10 @@ RUN set -eux; \
 	; \
 	\
 	pecl install apcu; \
-	pecl install psr; \
 	pecl install redis; \
 	pecl install yaml; \
 	docker-php-ext-enable \
 		apcu \
-		psr \
 		redis \
 		yaml \
 	; \
