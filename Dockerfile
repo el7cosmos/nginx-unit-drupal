@@ -1,7 +1,7 @@
 ARG UNIT_VERSION=1.26.1
 ARG PHP_VERSION=8.1
 
-FROM nginx/unit:${UNIT_VERSION}-php${PHP_VERSION}
+FROM unit:${UNIT_VERSION}-php${PHP_VERSION}
 
 # install the PHP extensions we need
 RUN set -eux; \
