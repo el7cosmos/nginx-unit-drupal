@@ -14,6 +14,8 @@ RUN set -eux; \
 		libicu-dev \
 		libjpeg-dev \
 		libpng-dev \
+		libpq-dev \
+		libwebp-dev \
 		libyaml-dev \
 		libzip-dev \
 	; \
@@ -21,6 +23,7 @@ RUN set -eux; \
 	docker-php-ext-configure gd \
 		--with-freetype \
 		--with-jpeg=/usr \
+		--with-webp \
 	; \
 	\
 	docker-php-ext-install -j "$(nproc)" \
@@ -29,6 +32,7 @@ RUN set -eux; \
 		intl \
 		opcache \
 		pdo_mysql \
+		pdo_pgsql \
 		zip \
 	; \
 	\
