@@ -16,7 +16,6 @@ RUN set -eux; \
 		libpng-dev \
 		libpq-dev \
 		libwebp-dev \
-		libyaml-dev \
 		libzip-dev \
 	; \
 	\
@@ -38,11 +37,9 @@ RUN set -eux; \
 	\
 	pecl install apcu; \
 	pecl install redis; \
-	pecl install yaml; \
 	docker-php-ext-enable \
 		apcu \
 		redis \
-		yaml \
 	; \
 	\
 # reset apt-mark's "manual" list so that "purge --auto-remove" will remove all build dependencies
